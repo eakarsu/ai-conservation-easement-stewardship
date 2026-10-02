@@ -1,0 +1,64 @@
+[
+  {
+    "id": "domain-calculation",
+    "title": "Stewardship monitoring coverage",
+    "operation": "progress",
+    "example": {
+      "ruleSource": "Fictional demonstration rule v1; replace with reviewed applicable terms",
+      "requirements": [
+        {
+          "id": "annual-parcel-visits",
+          "required": 12,
+          "completed": 9
+        },
+        {
+          "id": "baseline-updates",
+          "required": 3,
+          "completed": 1
+        }
+      ]
+    },
+    "description": "Track completed versus required monitoring activities under the entered stewardship plan."
+  },
+  {
+    "id": "evidence-check",
+    "operation": "evidence",
+    "title": "Protected Property evidence checklist",
+    "description": "Check source presence against an explicitly supplied document list; reviewer assesses adequacy.",
+    "example": {
+      "requirements": [
+        {
+          "id": "source-1",
+          "requirement": "Easement Term evidence",
+          "evidence": "Example source reference"
+        },
+        {
+          "id": "source-2",
+          "requirement": "Reviewed rule version",
+          "evidence": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "deadline-check",
+    "operation": "deadlines",
+    "title": "Operational deadline queue",
+    "description": "Compute overdue items from entered dates and completed flags; no external notifications.",
+    "example": {
+      "asOf": "2026-10-20T12:00:00Z",
+      "items": [
+        {
+          "id": "review-1",
+          "dueAt": "2026-10-18T00:00:00Z",
+          "completed": false
+        },
+        {
+          "id": "follow-up-1",
+          "dueAt": "2026-10-23T00:00:00Z",
+          "completed": false
+        }
+      ]
+    }
+  }
+]

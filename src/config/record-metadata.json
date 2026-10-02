@@ -1,0 +1,605 @@
+{
+  "ProtectedProperty": {
+    "name": "ProtectedProperty",
+    "fields": [
+      {
+        "name": "name",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "parcelNumber",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "landTrust",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "ownerName",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "areaHectares",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "monitoringDueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      }
+    ]
+  },
+  "EasementTerm": {
+    "name": "EasementTerm",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "sectionNumber",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "restrictionText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "allowedUse",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "version",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "BaselineReport": {
+    "name": "BaselineReport",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "surveyedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "surveyor",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "landUse",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "boundaryDescription",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "evidence",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "StewardshipVisit": {
+    "name": "StewardshipVisit",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "visitedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "steward",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "observations",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "photoReferences",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "nextDueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "LandownerContact": {
+    "name": "LandownerContact",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "contactedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "contactName",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "channel",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "discussion",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "followUpAt",
+        "kind": "date",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "UseRequest": {
+    "name": "UseRequest",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "proposedUse",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "submittedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "requestedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "applicant",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "termReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "PotentialViolation": {
+    "name": "PotentialViolation",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "observedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "description",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "termReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "response",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "dueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "RestorationAction": {
+    "name": "RestorationAction",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "targetArea",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "action",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "owner",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "dueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "evidence",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "StewardshipExpense": {
+    "name": "StewardshipExpense",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "category",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "incurredAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "amountCents",
+        "kind": "number",
+        "required": true,
+        "integer": true,
+        "min": 0
+      },
+      {
+        "name": "currency",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "receipt",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "OperationalTask": {
+    "name": "OperationalTask",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "owner",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "priority",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "startAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "dueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "done",
+        "kind": "boolean",
+        "required": true
+      },
+      {
+        "name": "notes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "RuleVersion": {
+    "name": "RuleVersion",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "jurisdiction",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "version",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "expiresAt",
+        "kind": "date",
+        "required": false
+      },
+      {
+        "name": "sourceUrl",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requirementText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  },
+  "DocumentRequirement": {
+    "name": "DocumentRequirement",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "category",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requiredBy",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "sourceReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "evidenceReference",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "reviewNotes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "protectedPropertyId",
+        "kind": "string",
+        "required": true,
+        "relation": "ProtectedProperty"
+      }
+    ],
+    "parent": {
+      "entity": "ProtectedProperty",
+      "field": "protectedPropertyId"
+    }
+  }
+}
